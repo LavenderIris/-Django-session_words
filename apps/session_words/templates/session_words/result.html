@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey result</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        p{
+            padding: 0px;
+            margin: 2px;
+        }
+        h3 {
+            margin: 2px;
+        }
+    </style>
+    <body>
+        <h4>Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.</h4>
+
+        <h3><u>Submitted Information</u></h3>
+        <p> Name: {{request.session.name}}</p>
+        <p> location: {{request.session.location}}</p>
+        <p> language: {{request.session.language}}</p>
+        <p> comment: {{request.session.comment}}</p>
+        
+
+        <form action="/survey/process" method="GET">
+            {% csrf_token %}
+            <button type='Submit'>Go Back</button>
+        </form>
+    </body>
+</html>
