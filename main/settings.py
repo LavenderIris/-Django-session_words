@@ -31,11 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
-    'apps.session_words',
-=======
-    'apps.ninja_gold',
->>>>>>> 40d20ba1baf3b2831807f2556c890bb205cd2e9f
+    'apps.courses',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

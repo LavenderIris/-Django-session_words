@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delete a Course</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <style>
+  form{
+    display: inline-block;
+    }
+
+    .red{
+        background-color:red;
+        color: white;
+    }
+  </style>
+  <body>
+    <h3>Are you sure you want to delete the following course?</h3>
+    <p>Name: {{course.name}}</p>
+    <p>Name: {{course.description.desc}}</p>
+    <form action="/">
+        <button>No</button>
+    </form>    
+    <form action="/courses/{{course.id}}/delete">
+        <button class='red'>Yes, I want to delete this!</button>
+    </form>       
+</body>
+</html>

@@ -17,9 +17,5 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-<<<<<<< HEAD
-    url(r'^session_words/', include('apps.session_words.urls')),
-=======
-    url(r'^', include('apps.ninja_gold.urls')),
->>>>>>> 40d20ba1baf3b2831807f2556c890bb205cd2e9f
+    url(r'^', include('apps.courses.urls')),
 ]

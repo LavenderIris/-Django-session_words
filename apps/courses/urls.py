@@ -3,7 +3,7 @@ from . import views           # This line is new!
 
 urlpatterns = [
     url(r'^$', views.index),     # This line has changed!
-    url(r'^add_word$', views.add_word),
-    url(r'^reset$', views.reset),
-    
+    url(r'^add$', views.add),
+    url(r'^courses/(?P<id>\d+)/destroy$', views.destroy),
+     url(r'^courses/(?P<id>\d+)/delete$', views.delete)
 ]
